@@ -13,18 +13,22 @@
   color: #35c66b;
 }
 
+li {
+  list-style: none;
+}
+
 .container {
   width: 1512px;
   margin: 0 auto;
 }
 
-body {
-  background-color: #252525;
-}
-
 header,
 main {
   padding: 0 50px;
+}
+
+body {
+  background-color: #121517;
 }
 
 a {
@@ -45,6 +49,12 @@ a {
   justify-content: center;
   gap: 100px;
 }
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
 .navbar__header {
   color: #35c66b;
   font-size: 37px;
@@ -56,8 +66,9 @@ a {
 .hero {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 400px;
   color: #fff;
+  position: relative;
 }
 .hero__header {
   font-size: 80px;
@@ -75,8 +86,55 @@ a {
   line-height: 30px;
   width: 570px;
 }
+.hero__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
 .hero__btn1 {
   width: 333px;
   height: 70px;
   color: #fff;
+  border-radius: 35px;
+  background: linear-gradient(45deg, #35c66b, #237249);
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}
+.hero__btn2 {
+  width: 167px;
+  height: 70px;
+  border-radius: 35px;
+  font-size: 24px;
+  color: #fff;
+  background-color: #121517;
+  cursor: pointer;
+}
+.hero__users {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.hero__user {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 105px;
+}
+.hero__user h2 {
+  font-size: 62px;
+}
+.hero__user p {
+  font-size: 20px;
+}
+.hero__blur1 {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 70px;
+  top: 150px;
+  background: linear-gradient(267.2deg, rgba(35, 114, 73, 0.55) 3.05%, rgba(53, 198, 107, 0.73) 40.73%);
+  filter: blur(87.75px);
 }/*# sourceMappingURL=style.css.map */

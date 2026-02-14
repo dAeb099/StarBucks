@@ -13,18 +13,37 @@
   color: #35c66b;
 }
 
+li {
+  list-style: none;
+}
+
 .container {
   width: 1512px;
   margin: 0 auto;
 }
 
-body {
-  background-color: #252525;
+@mixin blur($w, $h, $l, $t) {
+  position: absolute;
+  width: $w;
+  height: $h;
+  left: $l;
+  top: $t;
+
+  background: linear-gradient(
+    267.2deg,
+    rgba(35, 114, 73, 0.55) 3.05%,
+    rgba(53, 198, 107, 0.73) 40.73%
+  );
+  filter: blur(87.75px);
 }
 
 header,
 main {
   padding: 0 50px;
+}
+
+body {
+  background-color: #121517;
 }
 
 a {
@@ -44,6 +63,12 @@ a {
     justify-content: center;
     gap: 100px;
   }
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+  }
   &__header {
     color: #35c66b;
     font-size: 37px;
@@ -54,11 +79,14 @@ a {
   }
 }
 
+
+
 .hero {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 400px;
   color: #fff;
+  position: relative;
   &__header {
     font-size: 80px;
     width: 543px;
@@ -75,9 +103,50 @@ a {
     line-height: 30px;
     width: 570px;
   }
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
   &__btn1 {
     width: 333px;
     height: 70px;
     color: #fff;
+    border-radius: 35px;
+    background: linear-gradient(45deg, #35c66b, #237249);
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+  }
+  &__btn2 {
+    width: 167px;
+    height: 70px;
+    border-radius: 35px;
+    font-size: 24px;
+    color: #fff;
+    background-color: #121517;
+    cursor: pointer;
+  }
+  &__users {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  &__user {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 105px;
+    & h2 {
+      font-size: 62px;
+    }
+    & p {
+      font-size: 20px;
+    }
+  }
+  &__blur1 {
+    @include blur(80px, 80px, 70px, 150px)
   }
 }

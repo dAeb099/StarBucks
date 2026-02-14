@@ -11,21 +11,50 @@
     <header class="navbar container">
       <h3 class="navbar__header">StarBucks</h3>
       <nav class="navbar__nav">
-        <a href="#" class="navbar__link">Home</a>
-        <a href="#" class="navbar__link">Select</a>
-        <a href="#" class="navbar__link">Shop</a>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">Select</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">Shop</a>
+          </li>
+        </ul>
       </nav>
     </header>
     <main>
       <section class="hero container">
         <div class="hero__content">
-          <h1 class="hero__header">New Cafe by <span class="green">StarBucks</span></h1>
+          <div class="hero__blur1"></div>
+          <h1 class="hero__header">
+            New Cafe by <span class="green">StarBucks</span>
+          </h1>
           <p class="white hero__text">
             Have time to buy the most harmonious drinks in the new Starbucks
             coffee and don't forget about the discount!
           </p>
-          <button class="hero__btn1">Select a coffee</button>
+          <article class="hero__btns">
+            <button class="hero__btn1">Select a coffee</button>
+            <button class="hero__btn2">More</button>
+          </article>
+          <article class="hero__users">
+            <div class="hero__user">
+              <h2>9k<span class="green">+</span></h2>
+              <p>Premium users</p>
+            </div>
+            <div class="hero__user">
+              <h2>2k<span class="green">+</span></h2>
+              <p>Happy customers</p>
+            </div>
+            <div class="hero__user">
+              <h2>28<span class="green">+</span></h2>
+              <p>Awards winning</p>
+            </div>
+          </article>
         </div>
+        <img src="./assets/cup.png" alt="" />
       </section>
     </main>
   </body>
