@@ -28,12 +28,7 @@ li {
   height: $h;
   left: $l;
   top: $t;
-
-  background: linear-gradient(
-    267.2deg,
-    rgba(35, 114, 73, 0.55) 3.05%,
-    rgba(53, 198, 107, 0.73) 40.73%
-  );
+  background-color: #35c66b;
   filter: blur(87.75px);
 }
 
@@ -148,5 +143,50 @@ a {
   }
   &__blur1 {
     @include blur(80px, 80px, 70px, 150px)
+  }
+}
+
+.have {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 800px;
+  height: 400px;
+  border-radius: 35px;
+  gap: 60px;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 175px;
+    height: 400px;
+    text-align: center;
+    gap: 15px;
+    justify-content: end;
+    padding-bottom: 50px;
+  }
+  &__item__header {
+    font-size: 32px;
+  }
+}
+
+.delicious {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+  width: 1280px;
+  color: #fff;
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 457px;
+  }
+  &__header {
+    font-size: 80px;
+  }
+  &__description {
+    line-height: 24px;
   }
 }
