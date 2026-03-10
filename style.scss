@@ -18,7 +18,7 @@ li {
 }
 
 .container {
-  width: 1512px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -32,13 +32,11 @@ li {
   filter: blur(87.75px);
 }
 
-header,
-main {
-  padding: 0 50px;
-}
-
 body {
   background-color: #121517;
+  position: relative;
+  width: 1512px;
+  margin: 0 auto;
 }
 
 a {
@@ -71,6 +69,9 @@ a {
 
   &__link {
     font-size: 19px;
+  }
+  &__img {
+    display: none;
   }
 }
 
@@ -293,52 +294,137 @@ a {
   }
 }
 
-.blur1 {
-  @include blur(80px, 80px, 70px, 150px);
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #000;
+  padding: 30px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 150px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 85px 25px 0;
+  }
+  &__link {
+    color: #585a5c;
+  }
+  &__lists {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  &__number {
+    color: #35c66b;
+    font-size: 37px;
+  }
 }
 
-.blur2 {
-  @include blur(80px, 80px, 250px, 900px);
-}
-
-.blur3 {
-  @include blur(80px, 80px, 60px, 1900px);
-  z-index: -1;
-}
-
-.blur4 {
-  @include blur(80px, 80px, 1200px, 1250px);
-  z-index: -1;
-}
-
-.blur5 {
-  @include blur(80px, 80px, 1300px, 600px);
-  z-index: -1;
-}
-
-.blur6 {
-  @include blur(80px, 80px, 1000px, 200px);
-  background-color: #fff;
-  z-index: -1;
-}
-
-.blur7 {
-  @include blur(80px, 80px, 260px, 2200px);
-  z-index: -1;
-}
-
-.blur8 {
-  @include blur(80px, 80px, 1025px, 2520px);
-  z-index: -1;
-}
-
-.blur9 {
-  @include blur(80px, 80px, 725px, 3020px);
-  z-index: -1;
-}
-
-.blur10 {
-  @include blur(80px, 80px, 525px, 3620px);
-  z-index: -1;
-  background-color: #fff;
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+  body {
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+  }
+  section {
+    margin: 15px;
+  }
+  .navbar {
+    justify-content: space-between;
+    &__menu {
+      display: none;
+    }
+    &__img {
+      display: flex;
+    }
+    margin: 5px 15px;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: start;
+    &__content {
+      margin-top: -450px;
+    }
+    & img {
+      width: 280px;
+      margin: 0;
+    }
+    margin: 15px;
+  }
+  .have {
+    flex-direction: column;
+    width: 320px;
+    height: 1100px;
+    margin: 50px auto;
+    gap: 0;
+  }
+  .delicious {
+    flex-direction: column;
+    margin: 15px;
+  }
+  .products {
+    &__top {
+      flex-direction: column;
+    }
+    &__bottom {
+      overflow: auto;
+      border: 1px solid #35c66b;
+      border-radius: 20px;
+      margin: 20px 0;
+      padding: 10px;
+      height: 650px;
+    }
+  }
+  .events {
+    margin: 15px;
+    &__top {
+      flex-direction: column;
+      gap: 0;
+    }
+    overflow: auto;
+  }
+  .contacts {
+    flex-direction: column-reverse;
+    &__img {
+      align-self: flex-end;
+      width: 300px;
+    }
+  }
+  .footer {
+    width: 100%;
+    max-width: 480px;
+    min-width: 320px;
+    margin-top: 50px;
+    font-size: 0.75em;
+    &__top {
+      max-width: 480px;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+    &__number {
+      font-size: 16px;
+    }
+    & img {
+      width: 30px;
+    }
+    &__bottom {
+      justify-content: start;
+      gap: 240px;
+    }
+  }
 }
